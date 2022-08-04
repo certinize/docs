@@ -19,7 +19,7 @@ This specification describes the front-end feature integration and underlying te
 
 This section specifies the technologies necessary for the project’s completion. For now, it does not include third-party frameworks and libraries which are subject to change.
 
-## Front-end Client
+### Front-end Client
 
 - JavaScript
 - Node.js
