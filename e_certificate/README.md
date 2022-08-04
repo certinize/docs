@@ -42,6 +42,6 @@ The digital asset that proves digital ownership of the e-Certificate, i.e., the 
 
 A set of data containing information about the NFT, including the link to the original copy of the e-Certificate
 
-Once minted, the NFT belongs to the account that minted it. The owner can then transfer it to any Solana account using a simple transfer transaction. The sending of the NFT is controlled by the on-chain program(s) included with the system. When the owner decides to transfer the NFT, the token that represents the e-Certificate, the program(s) will transfer the NFT from the owner to the recipient.
+Once minted, the NFT belongs to the account that minted it. The owner can then transfer it to any Solana account using a simple *transfer transaction*. The sending of the NFT is controlled by the on-chain program(s) included with the system. When the owner decides to transfer the NFT, the token that represents the e-Certificate, the program(s) will transfer the NFT from the owner to the recipient.
 
 To learn more, please refer to Solana’s token program: [https://spl.solana.com/token](https://spl.solana.com/token)
