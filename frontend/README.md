@@ -47,7 +47,7 @@ Example response body:
 
 ```json
 {
- "api-key": "78c04a31-6c85-471c-a8cc-da5b547baaae"
+  "api-key": "78c04a31-6c85-471c-a8cc-da5b547baaae"
 }
 ```
 
@@ -91,21 +91,21 @@ Users should be able to create or generate an e-Certificate using the process de
 
     ```json
     {
-    "recipient_name": {
+      "recipient_name": {
         "position": {
-        "x": 960,
-        "y": 540
+          "x": 960,
+          "y": 540
         },
         "font_size": 24
-    },
-    "issuance_date": {
+      },
+      "issuance_date": {
         "position": {
-        "x": 130,
-        "y": 950
+          "x": 130,
+          "y": 950
         },
         "font_size": 12
-    },
-    "template_id": "900bb16f-77a8-47d0-82a4-5a7b10b34296"
+      },
+      "template_id": "900bb16f-77a8-47d0-82a4-5a7b10b34296"
     }
     ```
 
@@ -117,22 +117,22 @@ Users should be able to create or generate an e-Certificate using the process de
 
     ```json
     {
-    "template_config_id": "cbddb991-41f3-44b7-a377-f5d98755e881",
-    "template_id": "900bb16f-77a8-47d0-82a4-5a7b10b34296",
-    "recipient_name": {
+      "template_config_id": "cbddb991-41f3-44b7-a377-f5d98755e881",
+      "template_id": "900bb16f-77a8-47d0-82a4-5a7b10b34296",
+      "recipient_name": {
         "position": {
-        "x": 960,
-        "y": 540
+          "x": 960,
+          "y": 540
         },
         "font_size": 24
-    },
-    "issuance_date": {
+      },
+      "issuance_date": {
         "position": {
-        "x": 130,
-        "y": 950
+          "x": 130,
+          "y": 950
         },
         "font_size": 12
-    }
+      }
     }
     ```
 
@@ -172,21 +172,21 @@ Users should be able to issue an e-Certificate using the process described in th
 
     ```json
     {
-    "recipient_name": {
+      "recipient_name": {
         "position": {
-        "x": 960,
-        "y": 540
+          "x": 960,
+          "y": 540
         },
         "font_size": 24
-    },
-    "issuance_date": {
+      },
+      "issuance_date": {
         "position": {
-        "x": 130,
-        "y": 950
+          "x": 130,
+          "y": 950
         },
         "font_size": 12
-    },
-    "template_config_id": "cbddb991-41f3-44b7-a377-f5d98755e881"
+      },
+      "template_config_id": "cbddb991-41f3-44b7-a377-f5d98755e881"
     }
     ```
 
@@ -199,14 +199,14 @@ Users should be able to issue an e-Certificate using the process described in th
 
     ```json
     {
-    "template_config_id": "cbddb991-41f3-44b7-a377-f5d98755e881",
-    "recipients": [
+      "template_config_id": "cbddb991-41f3-44b7-a377-f5d98755e881",
+      "recipients": [
         {
-        "recipient_name": "Juan Cruz",
-        "email_address": "juan_cruz@email.com",
-        "wallet_address": "9ZNTfG4NyQgxy2SWjSiQoUyBPEvXT2xo7fKc5hPYYJ7b"
+          "recipient_name": "Juan Cruz",
+          "email_address": "juan_cruz@email.com",
+          "wallet_address": "9ZNTfG4NyQgxy2SWjSiQoUyBPEvXT2xo7fKc5hPYYJ7b"
         }
-    ]
+      ]
     }
     ```
 
@@ -225,24 +225,24 @@ Users should be able to issue an e-Certificate using the process described in th
 
     ```json
     {
-    "template_id": "cbddb991-41f3-44b7-a377-f5d98755e881",
-    "template_url": "https://bucket.s3.objectstorageprovider.com/certificate_template.jpg",
-    "recipient_name_position": {
+      "template_id": "cbddb991-41f3-44b7-a377-f5d98755e881",
+      "template_url": "https://bucket.s3.objectstorageprovider.com/certificate_template.jpg",
+      "recipient_name_position": {
         "x": 960,
         "y": 540
-    },
-    "issuance_date_position": {
+      },
+      "issuance_date_position": {
         "x": 130,
         "y": 950
-    },
-    "issuance_date": "2022-01-31",
-    "recipients": [
+      },
+      "issuance_date": "2022-01-31",
+      "recipients": [
         {
-        "recipient_name": "Juan Cruz",
-        "email_address": "juan_cruz@email.com",
-        "wallet_address": "9ZNTfG4NyQgxy2SWjSiQoUyBPEvXT2xo7fKc5hPYYJ7b"
+          "recipient_name": "Juan Cruz",
+          "email_address": "juan_cruz@email.com",
+          "wallet_address": "9ZNTfG4NyQgxy2SWjSiQoUyBPEvXT2xo7fKc5hPYYJ7b"
         }
-    ]
+      ]
     }
     ```
 
@@ -256,18 +256,18 @@ Users should be able to issue an e-Certificate using the process described in th
 
     ```json
     {
-    "transfer_id": "9b5ec38f-4d0f-4a8b-9a36-60feba6ea7b1",
-    "certificate_template_id": "900bb16f-77a8-47d0-82a4-5a7b10b34296",
-    "certificate_config_id": "cbddb991-41f3-44b7-a377-f5d98755e881",
-    "issue_date": "2022-01-31",
-    "recipients": [
+      "transfer_id": "9b5ec38f-4d0f-4a8b-9a36-60feba6ea7b1",
+      "certificate_template_id": "900bb16f-77a8-47d0-82a4-5a7b10b34296",
+      "certificate_config_id": "cbddb991-41f3-44b7-a377-f5d98755e881",
+      "issue_date": "2022-01-31",
+      "recipients": [
         {
-        "recipient_name": "Juan Cruz",
-        "email_address": "juan_cruz@email.com",
-        "wallet_address": "9ZNTfG4NyQgxy2SWjSiQoUyBPEvXT2xo7fKc5hPYYJ7b",
-        "certificate_id": "8561b082-bcdd-4ff0-9506-ee1dcebda715"
+          "recipient_name": "Juan Cruz",
+          "email_address": "juan_cruz@email.com",
+          "wallet_address": "9ZNTfG4NyQgxy2SWjSiQoUyBPEvXT2xo7fKc5hPYYJ7b",
+          "certificate_id": "8561b082-bcdd-4ff0-9506-ee1dcebda715"
         }
-    ]
+      ]
     }
     ```
 
