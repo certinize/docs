@@ -35,10 +35,12 @@ Note: The API endpoints mentioned in this section are still in development. You 
 - Users should be able to gain access to the system using their [Solana Wallet](https://solana.com/ecosystem/explore?categories=wallet).
 - The system should check if the user already has an account on the system. To do so, the user’s wallet address should be passed to the `/user/auth` endpoint’s `wallet_address` parameter via an HTTP GET request.
 
-Example request:
+Example request body:
 
-```
-/user/auth?wallet_address=9ZNTfG4NyQgxy2SWjSiQoUyBPEvXT2xo7fKc5hPYYJ7b
+```json
+{
+ "wallet_address": "9ZNTfG4NyQgxy2SWjSiQoUyBPEvXT2xo7fKc5hPYYJ7b" 
+}
 ```
 
 Regardless whether or not the user already has an account, the `/user/auth` endpoint should return a JSON object containing an API Key (UUID).
