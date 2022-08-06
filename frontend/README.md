@@ -39,7 +39,7 @@ Example request body:
 
 ```json
 {
- "wallet_address": "9ZNTfG4NyQgxy2SWjSiQoUyBPEvXT2xo7fKc5hPYYJ7b" 
+  "wallet_address": "9ZNTfG4NyQgxy2SWjSiQoUyBPEvXT2xo7fKc5hPYYJ7b" 
 }
 ```
 
@@ -193,7 +193,7 @@ Users should be able to issue an e-Certificate using the process described in th
     ```
 
 - The interface should prompt the user to enter the recipient name, email address, and Solana wallet address.
-- The entered information should be sent to the /certificates/generate endpoint via an HTTP POST request.
+- The entered information should be sent to the `/certificates/generate` endpoint via an HTTP POST request.
 
     The HTTP POST request body should be a JSON object containing the e-Certificate template configuration ID and the information the user entered.
 
