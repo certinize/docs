@@ -12,6 +12,7 @@
 - `/certificates/configure`
 - `/certificates/generate`
 - `/certificates/transfer`
+- `/certificates/verify`
 
 ## Database
 
