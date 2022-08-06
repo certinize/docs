@@ -4,14 +4,14 @@
 
 ### User
 
-- `/user/auth`
+- `/users/auth`
 
 ### Certificate
 
-- `/certificate/save`
-- `/certificate/configure`
-- `/certificate/generate`
-- `/certificate/transfer`
+- `/certificates/save`
+- `/certificates/configure`
+- `/certificates/generate`
+- `/certificates/transfer`
 
 ## Database
 
