@@ -33,7 +33,7 @@ Note: The API endpoints mentioned in this section are still in development. You 
 ### User Authentication and Authorization
 
 - Users should be able to gain access to the system using their [Solana Wallet](https://solana.com/ecosystem/explore?categories=wallet).
-- The system should check if the user already has an account on the system. To do so, the user’s wallet address should be passed to the `/user/auth` endpoint’s `wallet_address` parameter via an HTTP GET request.
+- The system should check if the user already has an account on the system. To do so, the user’s wallet address should be passed to the `/user/auth` endpoint’s `wallet_address` parameter via an HTTP POST request.
 
 Example request body:
 
