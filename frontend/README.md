@@ -33,14 +33,12 @@ Note: The API endpoints mentioned in this section are still in development. You 
 ### User Authentication and Authorization
 
 - Users should be able to gain access to the system using their [Solana Wallet](https://solana.com/ecosystem/explore?categories=wallet).
-- The system should check if the user already has an account on the system. To do so, the user’s wallet address should be passed to the `/users/auth` endpoint’s `wallet_address` parameter via an HTTP POST request.
+- The system should check if the user already has an account on the system. To do so, the user’s wallet address should be attached as a path parameter to the `/users` endpoint and an HTTP GET request should be made.
 
-Example request body:
+Example request:
 
-```json
-{
-  "wallet_address": "9ZNTfG4NyQgxy2SWjSiQoUyBPEvXT2xo7fKc5hPYYJ7b" 
-}
+```
+/users/9ZNTfG4NyQgxy2SWjSiQoUyBPEvXT2xo7fKc5hPYYJ7b
 ```
 
 Regardless whether or not the user already has an account, the `/users/auth` endpoint should return a JSON object containing an API Key (UUID).
@@ -81,7 +79,7 @@ Users should be able to create or generate an e-Certificate using the process de
 
     > Tip: This can be achieved by using two reticles or cross-hairs you can drag across the certificate.
 
-- The e-Certificate template configuration should be saved by making an HTTP POST request to the `/certificates/save` endpoint.
+- The e-Certificate template configuration should be saved by making an HTTP POST request to the `/configurations` endpoint.
 
     The HTTP POST request body should be in raw [JavaScript Object Notation (JSON)](https://en.wikipedia.org/wiki/JSON) format and it should contain three (3) key-value pairs:
 
@@ -113,7 +111,7 @@ Users should be able to create or generate an e-Certificate using the process de
 
     In addition, the request should contain the [X-API-Key header](https://en.wikipedia.org/wiki/API_key) and the user’s corresponding API Key.
 
-    The `/certificates/save` endpoint should return a JSON object containing the information about the saved e-Certificate template configuration.
+    The `/configurations` endpoint should return a JSON object containing the information about the saved e-Certificate template configuration.
 
     Example response body:
 
@@ -142,29 +140,51 @@ Users should be able to create or generate an e-Certificate using the process de
 
 Users should be able to issue an e-Certificate using the process described in this section.
 
-- The interface should prompt the user to select an e-Certificate template configuration from a template gallery.
+- When generating e-Certificates, the interface should prompt the user to select an e-Certificate template configuration from a template gallery.
 
-- To retrieve a list of e-Certificate template configurations, the client should make an HTTP GET request to the `/certificates/configure` endpoint.
+- To retrieve a list of e-Certificate template configurations, the client should make an HTTP GET request to the `/configurations` endpoint.
 
     In addition, the request should contain the X-API-Key header and the user’s corresponding API Key.
 
-    The `/certificates/configure` endpoint should return an a JSON object containing a list of certificate configuration IDs.
+    The `/configurations` endpoint should return a JSON object containing a list of certificate configuration IDs.
 
     Example response body:
 
     ```json
-    {"0": "cbddb991-41f3-44b7-a377-f5d98755e881", "1": "f9153cc6-00b5-485f-8598-d036331585cd"}
+    {
+      "configurations": [
+        {
+          "template_config_id": "cbddb991-41f3-44b7-a377-f5d98755e881",
+          "template_id": "900bb16f-77a8-47d0-82a4-5a7b10b34296",
+          "recipient_name": {
+            "position": {
+              "x": 960,
+              "y": 540
+            },
+            "font_size": 24
+          },
+          "issuance_date": {
+            "position": {
+              "x": 130,
+              "y": 950
+            },
+            "font_size": 12
+          }
+        },
+        ...
+      ]
+    }
     ```
 
-- A specific e-Certificate template configuration should be retrieved by making an HTTP GET request to the `/certificates/configure` endpoint using the `template_config_id` parameter, like so:
+- A specific e-Certificate template configuration should be retrieved by making an HTTP GET request to the `/configurations` endpoint by attaching the template configuration ID as path parameter, like so:
 
     ```
-    /certificates/configure?template_config_id=cbddb991-41f3-44b7-a377-f5d98755e881
+    /configurations/cbddb991-41f3-44b7-a377-f5d98755e881
     ```
 
     In addition, the request should contain the X-API-Key header and the user’s corresponding API Key.
 
-    The `/certificates/configure` endpoint should return a JSON object containing three (3) key-value pairs:
+    The `/configurations` endpoint should return a JSON object containing three (3) key-value pairs:
 
         - recipient_name
         - issuance_date
@@ -193,7 +213,7 @@ Users should be able to issue an e-Certificate using the process described in th
     ```
 
 - The interface should prompt the user to enter the recipient name, email address, and Solana wallet address.
-- The entered information should be sent to the `/certificates/generate` endpoint via an HTTP POST request.
+- To generate an e-Certificate(s) The entered information should be sent to the `/certificates` endpoint via an HTTP POST request.
 
     The HTTP POST request body should be a JSON object containing the e-Certificate template configuration ID and the information the user entered.
 
@@ -214,7 +234,7 @@ Users should be able to issue an e-Certificate using the process described in th
 
     Recipient information should be appended as an object to the recipients list. Each list element/object should hold recipient information, including recipient name, email address, and wallet address.
 
-    The `/certificates/generate` endpoint should return a JSON object containing six (6) key-value pairs:
+    The `/certificates` endpoint should return a JSON object containing six (6) key-value pairs:
 
         - template_config_id
         - template_url
@@ -248,11 +268,11 @@ Users should be able to issue an e-Certificate using the process described in th
     }
     ```
 
-- When the user decides to transfer the e-Certificate to its recipient(s), the system should make an HTTP POST request to the /certificates/transfer endpoint.
+- When the user decides to transfer the e-Certificate to its recipient(s), the system should make an HTTP POST request to the `/issuances` endpoint.
 
-    The HTTP POST request body should be the JSON object returned by the `/certificates/generate` endpoint.
+    The HTTP POST request body should be the JSON object returned by the `/certificates` endpoint.
 
-    The `/certificates/transfer` endpoint should return a JSON object containing information about the transfer.
+    The `/issuances` endpoint should return a JSON object containing information about the transfer.
 
     Example response body:
 
@@ -277,10 +297,20 @@ Users should be able to issue an e-Certificate using the process described in th
 
 The user should be able to verify the legitimacy of their e-Certificate by following the process described in this section.
 
-- Each e-Certificate is issued with a unique ID (UUID). Users can verify this ID by making an HTTP GET request to the `/certificates/verify` endpoint using the `certificate_id` parameter, like so:
+- Each e-Certificate is issued with a unique ID (UUID). Users can verify this ID by making an HTTP GET request to the `/certificates` endpoint and attaching said ID as a path parameter, like so:
 
 ```
-/certificates/verify?certificate_id=8561b082-bcdd-4ff0-9506-ee1dcebda715
+/certificates/8561b082-bcdd-4ff0-9506-ee1dcebda715
+```
+
+If the e-Certificate is legitimate, the `/certificates` endpoint should return truish value, otherwise it should return a falsy value.
+
+Example response body:
+
+```json
+{
+  "verified": true
+}
 ```
 
 > Tip: A friendly user interface should represent this endpoint.
