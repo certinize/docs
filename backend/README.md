@@ -79,7 +79,7 @@ Example response:
 
     - Method: POST
     - Path: /certificates
-    - Description: Generate an e-Certificate.
+    - Summary: Generate an e-Certificate.
 
 **Request**
 
@@ -162,7 +162,7 @@ JSON Response:
 
     - Method: POST
     - Path: /configurations
-    - Description: Save an e-Certificate template configuration.
+    - Summary: Save an e-Certificate template configuration.
 
 **Request**
 
@@ -248,7 +248,7 @@ JSON Response:
 
     - Method: GET
     - Path: /configurations/{template_config_id:uuid}
-    - Description: Get a specific template configuration.
+    - Summary: Get a specific template configuration.
 
 **Request**
 
@@ -319,7 +319,7 @@ JSON Response:
 
     - Method: GET
     - Path: /configurations
-    - Description: Get a list of template configurations.
+    - Summary: Get a list of template configurations.
 
 **Request**
 
@@ -393,7 +393,8 @@ JSON Response:
 
     - Method: POST
     - Path: /issuances
-    - Description: Transfer an e-Certificate to a recipient(s).
+    - Summary: Transfer an e-Certificate to a recipient(s). 
+    - Description: Transfer generated e-Certificate(s) inside an e-Certificate collection. The recipient(s) is indicated in the collection metadata.
 
 **Request**
 
@@ -459,7 +460,7 @@ JSON Response:
 
     - Method: GET
     - Path: /templates
-    - Description: Get a list of e-Certificate templates.
+    - Summary: Get a list of e-Certificate templates.
 
 **Request**
 
@@ -513,7 +514,7 @@ JSON Response:
 
     - Method: POST
     - Path: /users
-    - Description: Transfer an e-Certificate to a recipient(s).
+    - Summary: Transfer an e-Certificate to a recipient(s).
 
 **Request**
 
