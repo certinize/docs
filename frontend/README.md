@@ -230,7 +230,7 @@ Users should be able to issue an e-Certificate using the process described in th
     ```
 
 - The interface should prompt the user to enter the recipient name, email address, and Solana wallet address.
-- To generate an e-Certificate(s) The entered information should be sent to the `/certificates` endpoint via an HTTP POST request.
+- To generate an e-Certificate(s), the entered information should be sent to the `/certificates` endpoint via an HTTP POST request.
 
     The HTTP POST request body should be a JSON object containing the e-Certificate template configuration ID and the information the user entered.
 
