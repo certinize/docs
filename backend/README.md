@@ -111,6 +111,7 @@ Request Body:
 ```json
 {
   "template_config_id": "36b91a30-16fb-11ed-8a9e-00155d3ecff4",
+  "issuance_date": "2022-01-31",
   "recipients": [
     {
       "recipient_name": "Juan Cruz",
