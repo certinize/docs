@@ -512,9 +512,9 @@ JSON Response:
 
 ### Auth Solana User
 
-    - Method: POST
+    - Method: GET
     - Path: /users
-    - Summary: Transfer an e-Certificate to a recipient(s).
+    - Summary: Authorize Solana user.
 
 **Request**
 
