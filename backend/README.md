@@ -1,10 +1,13 @@
-# Back-end Specification
-
 ## REST API Endpoints
 
-### User
-
-### Certificate
+| Endpoint          | Method                        |
+|-------------------|-------------------------------|
+| `/certificates`   | GET, POST, PUT, DELETE, PATCH |
+| `/configurations` | GET, POST, PUT, DELETE, PATCH |
+| `/issuances`      | GET, POST, PUT, DELETE, PATCH |
+| `/templates`      | GET, POST, PUT, DELETE, PATCH |
+| `/users`          | GET, POST, PUT, DELETE, PATCH |
+|                   |                               |
 
 ## Database
 

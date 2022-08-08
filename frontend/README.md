@@ -75,6 +75,23 @@ Users should be able to create or generate an e-Certificate using the process de
 
     >At this point, the selected e-Certificate template should only require the name of the recipient and the issuance date. In other words, it should already contain the title, presentation line, description, signatory, signature, etc.
 
+- To get a list of e-Certificate templates, make an HTTP GET request to the `/templates` endpoint.
+
+  Example response body:
+  
+  ```json
+  {
+    "templates": [
+      {
+        "template_id": "900bb16f-77a8-47d0-82a4-5a7b10b34296",
+        "template_url": "http://bucket.s3.provider.com/template.png"
+      },
+      ...
+    ]
+
+  }
+  ```
+
 - The e-Certificate builder should prompt the user to specify the position where the name of the recipient and the issuance date should be placed.
 
     > Tip: This can be achieved by using two reticles or cross-hairs you can drag across the certificate.
