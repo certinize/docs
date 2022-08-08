@@ -442,7 +442,7 @@ JSON Response:
   "transfer_id": "9b5ec38f-4d0f-4a8b-9a36-60feba6ea7b1",
   "template_id": "e82fbcd5-3f45-483e-887b-5ffec0194c42",
   "template_config_id": "36b91a30-16fb-11ed-8a9e-00155d3ecff4",
-  "issue_date": "2022-01-31",
+  "issuance_date": "2022-01-31",
   "recipients": [
     {
       "recipient_name": "Juan Cruz",
