@@ -7,6 +7,7 @@
 - [Tasks](#tasks)
     - <details>
         <summary><a href="#certificates">Certificates</a></summary>
+        <br>
         <ul>
             <li><a href="#generate-ecertificate">Generate eCertificate(s)</a></li>
         </ul>
@@ -14,6 +15,7 @@
 
     - <details>
         <summary><a href="#configurations">Configurations</a></summary>
+        <br>
         <ul>
             <li><a href="#create-template-configuration">Create Template Configuration</a></li>
             <li><a href="#get-template-configuration">Get Template Configuration</a></li>
@@ -23,6 +25,7 @@
 
     - <details>
         <summary><a href="#issuances">Issuances</a></summary>
+        <br>
         <ul>
             <li><a href="#transfer-certificate">Transfer Certificate</a></li>
         </ul>
@@ -30,6 +33,7 @@
 
     - <details>
         <summary><a href="#templates">Templates</a></summary>
+        <br>
         <ul>
             <li><a href="#list-templates">List Templates</a></li>
         </ul>
@@ -37,6 +41,7 @@
 
     - <details>
         <summary><a href="#users">Users</a></summary>
+        <br>
         <ul>
             <li><a href="#auth-solana-user">Auth Solana User</a></li>
         </ul>
@@ -60,7 +65,9 @@ Example response:
 
 ```json
 {
-    "api_key": "78c04a31-6c85-471c-a8cc-da5b547baaae"
+  "wallet_address": "9ZNTfG4NyQgxy2SWjSiQoUyBPEvXT2xo7fKc5hPYYJ7b",
+  "api_key": "e8e5725b-7f33-5bad-9438-e63bdbd2efea",
+  "user_id": "5ca167d6-1654-11ed-908f-00155d3ecff4"
 }
 ```
 
@@ -589,9 +596,9 @@ JSON Response:
 
 ```json
 {
-    "wallet_address": "9ZNTfG4NyQgxy2SWjSiQoUyBPEvXT2xo7fKc5hPYYJ7b",
-    "api_key": "e8e5725b-7f33-5bad-9438-e63bdbd2efea",
-    "user_id": "5ca167d6-1654-11ed-908f-00155d3ecff4"
+  "wallet_address": "9ZNTfG4NyQgxy2SWjSiQoUyBPEvXT2xo7fKc5hPYYJ7b",
+  "api_key": "e8e5725b-7f33-5bad-9438-e63bdbd2efea",
+  "user_id": "5ca167d6-1654-11ed-908f-00155d3ecff4"
 }
 ```
 
