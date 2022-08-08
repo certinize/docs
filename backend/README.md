@@ -131,6 +131,7 @@ JSON Response:
 
 ```json
 {
+  "certificate_collection_id": "6a5cfab5-6451-4515-abb3-c6bd4033e21e",
   "template_id": "e82fbcd5-3f45-483e-887b-5ffec0194c42",
   "template_url": "https://bucket.s3.objectstorageprovider.com/certificate_template.jpg",
   "recipient_name_position": {
@@ -146,7 +147,8 @@ JSON Response:
     {
       "recipient_name": "Juan Cruz",
       "email_address": "juan_cruz@email.com",
-      "wallet_address": "9ZNTfG4NyQgxy2SWjSiQoUyBPEvXT2xo7fKc5hPYYJ7b"
+      "wallet_address": "9ZNTfG4NyQgxy2SWjSiQoUyBPEvXT2xo7fKc5hPYYJ7b",
+      "generated_certificate": "https://bucket.s3.objectstorageprovider.com/generated_certificate.jpg"
     }
   ]
 }
@@ -393,9 +395,11 @@ JSON Response:
 
 **Request**
 
-Supported Media Types:
+Path Parameters:
 
-- `application/json`
+```
+certificate_collection_id:uuid
+```
 
 **Response**
 
@@ -416,29 +420,10 @@ Request Header:
 X-API-Key: 0ef3c43d-a3ac-52a1-938b-57cff7e60282
 ```
 
-Request Body:
+Request Parameter:
 
-```json
-{
-  "template_id": "e82fbcd5-3f45-483e-887b-5ffec0194c42",
-  "template_url": "https://bucket.s3.objectstorageprovider.com/certificate_template.jpg",
-  "recipient_name_position": {
-    "x": 960,
-    "y": 540
-  },
-  "issuance_date_position": {
-    "x": 130,
-    "y": 950
-  },
-  "issuance_date": "2022-01-31",
-  "recipients": [
-    {
-      "recipient_name": "Juan Cruz",
-      "email_address": "juan_cruz@email.com",
-      "wallet_address": "9ZNTfG4NyQgxy2SWjSiQoUyBPEvXT2xo7fKc5hPYYJ7b"
-    }
-  ]
-}
+```
+/issuances/34f8ba1a-1707-11ed-a111-f73a0f2a24a8
 ```
 
 HTTP Status Code:
