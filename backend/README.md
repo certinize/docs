@@ -564,7 +564,3 @@ JSON Response:
   "user_id": "5ca167d6-1654-11ed-908f-00155d3ecff4"
 }
 ```
-
-## Database
-
-![db-design](db-design.svg)
