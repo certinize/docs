@@ -45,3 +45,18 @@ A set of data containing information about the NFT, including the link to the or
 Once minted, the NFT belongs to the account that minted it. The owner can then transfer it to any Solana account using a simple *transfer transaction*. The sending of the NFT is controlled by the on-chain program(s) included with the system. When the owner decides to transfer the NFT, the token that represents the e-Certificate, the program(s) will transfer the NFT from the owner to the recipient.
 
 To learn more, please refer to Solana’s token program: [https://spl.solana.com/token](https://spl.solana.com/token)
+
+## E-Certificate Verification
+
+An E-Certificate is a verfiable digital asset; the NFT metadata contains a certificate ID.
+
+The certificate ID is composed of two [xxh32](http://cyan4973.github.io/xxHash/) hashed values: A date and the details of the isssued e-Certificate, respectively.
+
+Example certificate ID: `110daa80-9c1ed00d`
+
+- In: `2022-08-27`, Out: `110daa80`
+- In: `Juan dela Cruz 2022-08-27`, Out: `9c1ed00d`
+
+The former part of the certificate ID identifies the data storage that can help verify the legitimacy of the e-Certificate. The latter part is a unique identifier assigned to the e-Certificate.
+
+> Note: Ideally, the data storage should contain the public wallet address of the issuer (key) and the latter part of the certificate ID (value).
