@@ -1,3 +1,3 @@
-## [back end](./backend/)
-## [e-Certificate](./e_certificates/)
-## [front end](./frontend/)
+## [back end](backend)
+## [e-Certificate](e_certificate)
+## [front end](frontend)
