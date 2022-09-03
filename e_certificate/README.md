@@ -50,12 +50,9 @@ To learn more, please refer to Solana’s token program: [https://spl.solana.com
 
 An E-Certificate is a verfiable digital asset; the NFT metadata contains a certificate ID.
 
-The certificate ID is composed of two [xxh32](http://cyan4973.github.io/xxHash/) hashed values: A date and the details of the isssued e-Certificate, respectively.
+The certificate ID is composed of two [xxh3](http://cyan4973.github.io/xxHash/) hashed values.
 
-Example certificate ID: `110daa80-9c1ed00d`
-
-- In: `2022-08-27`, Out: `110daa80`
-- In: `Juan dela Cruz 2022-08-27`, Out: `9c1ed00d`
+Example certificate ID: `a352ee326de02bf5-34046bb609f00ff1`
 
 The former part of the certificate ID identifies the data storage that can help verify the legitimacy of the e-Certificate. The latter part is a unique identifier assigned to the e-Certificate.
 
