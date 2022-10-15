@@ -66,7 +66,7 @@ Why provide a verification system?
 
 Consider this question:
 
-- How would a user know if a certificate was actually issued by a certain company or institution?
+How would a user know if a certificate was actually issued by a certain company or institution?
 
 There should be an ID somewhere on the certificate the user can enter on some website and the website will tell if the certificate is legitimate.
 
@@ -74,6 +74,6 @@ This is already done for us by the blockchain as all transactions are public. Th
 
 So the next question is:
 
-- How would a user know if the wallet address or public key used to issue the certificate actually belongs to a certain company or institution?
+How would a user know if the wallet address or public key used to issue the certificate actually belongs to a certain company or institution?
 
 The answer is to give them enough information to verify it themselves and to provide an interface that will let users immediately know if the wallet address or public key, the issuer, is authentic.
