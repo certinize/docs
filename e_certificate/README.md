@@ -60,9 +60,7 @@ The former part of the certificate ID identifies the data storage that can help 
 
 ## E-Certificate Verification System
 
-This document justifies the implementation of the verification system.
-
-Why does this document exist?
+This section justifies the implementation of the verification system.
 
 Certinize integrates programs and software for an unconventional approach to distributing e-Certificates, its verification process gets complicated.
 
