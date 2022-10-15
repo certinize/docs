@@ -60,43 +60,20 @@ The former part of the certificate ID identifies the data storage that can help 
 
 ## E-Certificate Verification System
 
-This section justifies the implementation of the verification system.
+This section justifies the implementation of a verification system.
 
-Certinize integrates programs and software for an unconventional approach to distributing e-Certificates, its verification process gets complicated.
+Why provide a verification system?
 
-The problem with automatically verifying and registering institutions/companies: It can lead to impostors and scams.
+Consider this question:
 
-Since issuing an e-Certificate requires recipients to send cryptocurrency to the issuer can lead to fraud, a pragmatic approach as well as a secure verification system is necessary. Scammers can use the information of an entity in a fraudulent manner to swindle users of their cryptocurrency. 
+- How would a user know if a certificate was actually issued by a certain company or institution?
 
-Solution:
+There should be an ID somewhere on the certificate the user can enter on some website and the website will tell if the certificate is legitimate.
 
-### Option 1: We manually verify users before registering them in our immediate or centralized database, then we can automate the verification process.
+This is already done for us by the blockchain as all transactions are public. The ID, in this case, is the wallet address or public key used to issue the certificate.
 
-Summary: Centralized Approach
+So the next question is:
 
-We can verify users or issuers by manually checking their email, website, telephone number, and physical address. The downside is that we have to manually verify them again if they want to use a different public key or wallet address to distribute e-Certificates. This process would become a bit complicated if a subsidiary wants to distribute its own e-Certificates using a similar name but with a different wallet. The subsidiary will not be able to verify itself as the necessary information is already taken by the holding company.
+- How would a user know if the wallet address or public key used to issue the certificate actually belongs to a certain company or institution?
 
-Other advantages:
-
-- It allows us to implement a standard, allowing other clients to implement their own e-Certificate issuance flow.
-
-### Option 2: Let users verify themselves. The verification process is manually and personally done by users.
-
-Summary: Decentralized Approach
-
-This approach appears more flexible for both the issuer and Certinize. The issuer can provide any information users can utilize to verify the legitimacy of the issuance. Moreover, the issuer would be able to quickly modify their information per issuance.
-
-The downside is the platform will not be able to automatically verify the legitimacy of the issuer and e-Certificate. Users will have to do it themselves if they want to know if the issuer is an actual representative of a company or institution or if the e-Certificate actually came from a certain entity. Another downside is that manually checking is a tedious process. Users will want to check in advance if the wallet address or public key of the issuer actually belongs to a certain company or institution. There are many ways to do it, and you can do them in combination to be more certain, but doing so is a tedious process and goes beyond the knowledge of common folks.
-
----
-
-If the one facilitating the verification process is the one who issued the e-Certificate, verifying an e-Certificate would be easy and straightforward. As a recipient, you already know the issuer is legitimate because the process, the platform, or the system, is registered with their name. The system, Certinize, may serve as a third-party platform.
-
-We don't have to verify if an e-Certificate was actually issued by someone because the blockchain does that for us. We may simplify that process for the user. Right now, what we need to do is provide a verification system that can attest to the legitimacy of the issuer. In this case, we need to check if the wallet address used to issue an e-Certificate actually belongs to a verified company or institution.
-
-The system aims to streamline the processes of distributing and verifying e-Certificates. However, it should not do so by burdening users. For this reason, combining both options seems to be the best approach.
-
-For option 1:
-- What would be the structure of the storage system for verified issuers?
-- How do users register for verification?
-- What is the process of manually verifying users?
+The answer is to give them enough information to verify it themselves and to provide an interface that will let users immediately know if the wallet address or public key, the issuer, is authentic.
