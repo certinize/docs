@@ -66,7 +66,7 @@ Certinize integrates programs and software for an unconventional approach to dis
 
 The problem with automatically verifying and registering institutions/companies: It can lead to impostors and scams.
 
-Since issuing an e-Certificate requires recipients to send cryptocurrency to the issuer, which can lead to scams, a pragmatic approach as well as a security verification system is necessary. Scammers can use the information of an entity in a fraudulent manner to swindle users of their cryptocurrency. 
+Since issuing an e-Certificate requires recipients to send cryptocurrency to the issuer can lead to fraud, a pragmatic approach as well as a security verification system is necessary. Scammers can use the information of an entity in a fraudulent manner to swindle users of their cryptocurrency. 
 
 Solution:
 
