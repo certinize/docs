@@ -70,7 +70,7 @@ How would a user know if a certificate was actually issued by a certain company 
 
 There should be an ID somewhere on the certificate the user can enter on some website and the website will tell if the certificate is legitimate.
 
-This is already done for us by the blockchain as all transactions are public. The ID, in this case, is the wallet address or public key used to issue the certificate.
+This is already done for us by the blockchain as all transactions are public. The ID, in this case, is the wallet address or public key used to issue the certificate. And with the help of blockchain explorers, softwares for visualizing blocks, transactions, and blockchain network metrics, the process becomes less technical and much simpler.
 
 So the next question is:
 
