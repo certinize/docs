@@ -76,4 +76,4 @@ So the next question is:
 
 How would a user know if the wallet address or public key used to issue the certificate actually belongs to a certain company or institution?
 
-The answer is to give them enough information to verify it themselves and to provide an interface that will let users immediately know if the wallet address or public key, the issuer, is authentic.
+The answer is to give the user enough information to verify it themselves and to provide an interface that will let users immediately know if the wallet address or public key, the issuer, is authentic.
