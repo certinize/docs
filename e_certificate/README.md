@@ -86,11 +86,11 @@ Summary: Decentralized Approach
 
 This approach appears more flexible for both the issuer and Certinize. The issuer can provide any information users can utilize to verify the legitimacy of the issuance. Moreover, the issuer would be able to quickly modify their information per issuance.
 
-The downside is the platform will not be able to automatically verify the legitimacy of the issuer and e-certificate. Users will have to do it themselves if they want to know if the issuer is an actual representative of a company or institution or if the e-Certificate actually came from a certain entity. Another downside is that manually checking is a tedious process. Users will want to check in advance if the wallet address or public key of the issuer actually belongs to a certain company or institution. There are many ways to do it, and you can do them in combination to be more certain, but doing so is a tedious process and goes beyond the knowledge of common folks.
+The downside is the platform will not be able to automatically verify the legitimacy of the issuer and e-Certificate. Users will have to do it themselves if they want to know if the issuer is an actual representative of a company or institution or if the e-Certificate actually came from a certain entity. Another downside is that manually checking is a tedious process. Users will want to check in advance if the wallet address or public key of the issuer actually belongs to a certain company or institution. There are many ways to do it, and you can do them in combination to be more certain, but doing so is a tedious process and goes beyond the knowledge of common folks.
 
 ---
 
-If the one facilitating the verification process is the one who issued the e-certificate, verifying an e-certificate would be easy and straightforward. As a recipient, you already know the issuer is legitimate because the process, the platform, or the system, is registered with their name. The system, Certinize, may serve as a third-party platform.
+If the one facilitating the verification process is the one who issued the e-Certificate, verifying an e-Certificate would be easy and straightforward. As a recipient, you already know the issuer is legitimate because the process, the platform, or the system, is registered with their name. The system, Certinize, may serve as a third-party platform.
 
 We don't have to verify if an e-Certificate was actually issued by someone because the blockchain does that for us. We may simplify that process for the user. Right now, what we need to do is provide a verification system that can attest to the legitimacy of the issuer. In this case, we need to check if the wallet address used to issue an e-Certificate actually belongs to a verified company or institution.
 
