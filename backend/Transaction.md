@@ -13,7 +13,7 @@ The process goes as follows:
 1. The client sends a request to the server.
     1. The request contains a public key.
 2. The server receives the request.
-    1. It stores the message, public key, and a request ID to a cache or database.
+    1. It generates a message, stores it to a cache or database along with the public key and a request ID.
     2. It returns the message and request ID to the client.
 3. The client signs the message and sends it back to the server with the request ID.
 4. The server receives the signed message and reference ID.
