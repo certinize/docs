@@ -48,32 +48,16 @@ To learn more, please refer to Solana’s token program: [https://spl.solana.com
 
 ## E-Certificate Verification
 
-An E-Certificate is a verfiable digital asset; the NFT metadata contains a certificate ID.
+This section justifies the implementation of a verification system.
 
-The certificate ID is composed of two [xxh3](http://cyan4973.github.io/xxHash/) hashed values.
+Consider these questions:
 
-Example certificate ID: `a352ee326de02bf5-34046bb609f00ff1`
+- How would a user know if the wallet address or public key used to issue the certificate actually belongs to a certain organization?
 
-The former part of the certificate ID identifies the data storage that can help verify the legitimacy of the e-Certificate. The latter part is a unique identifier assigned to the e-Certificate.
+- How would a user know if a certificate was actually issued by a certain organization?
 
-> Note: Ideally, the data storage should contain the public wallet address of the issuer (key) and the latter part of the certificate ID (value).
+Possible answers:
 
-## E-Certificate Verification System
+- There should be an ID included on the certificate that the user can enter on a website, which will verify the authenticity of the certificate. This is already facilitated for us by blockchain explorers, where the ID is the wallet address or public key used to issue the certificate.
 
-This section justifies the implementation of the verification system.
-
-Why provide a verification system?
-
-Consider this question:
-
-How would a user know if a certificate was actually issued by a certain organization?
-
-There should be an ID somewhere on the certificate the user can enter on some website and the website will tell if the certificate is legitimate.
-
-This is already done for us by the blockchain as all transactions are public. The ID, in this case, is the wallet address or public key used to issue the certificate.
-
-So the next question is:
-
-How would a user know if the wallet address or public key used to issue the certificate actually belongs to a certain organization?
-
-The answer is to give them enough information to verify it themselves and to provide an interface that will let users immediately know if the wallet address or public key, the issuer, is authentic.
+- Issuing bodies should give enough information that would let their recipients and other users to verify certificates themselves. A more user friendly solution is to provide an interface that can take an e-certificate's token address and display verifiable information.
